@@ -1,7 +1,7 @@
 {
   "name": "gofrendi-microphone",
   "description": "Clone of `microphone`, since the original author doesn't response to pull request",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Vincent Saluzzo",
   "contributors": [
     {

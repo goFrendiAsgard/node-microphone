@@ -10,11 +10,29 @@ var info = new PassThrough;
 
 var start = function(options) {
     options = options || {};
+
+    // set default options
+    if(!('mp3output' in options)){
+        options.mp3output = false;
+    }
+    if(!('cmdParams' in options)){
+        options.cmdParams = [];
+    }
+    if(!('cmd' in options)){
+        options.cmd = false;
+    }
     
     if(ps == null) {
-        ps = isMacOrWin
-        ? spawn('sox', ['-d', '-t', 'dat', '-p'])
-        : spawn('arecord', ['-D', 'plughw:1,0', '-f', 'dat']);
+
+        if(options.cmd != false){
+            ps = spawn(options.cmd, options.cmdParams)
+        }
+        else if(isMacOrWin){
+            spawn('sox', ['-d', '-t', 'dat', '-p'])
+        }
+        else{
+            spawn('arecord', ['-D', 'plughw:1,0', '-f', 'dat']);
+        }
 
         if(options.mp3output === true) {
             var encoder = new lame.Encoder( {

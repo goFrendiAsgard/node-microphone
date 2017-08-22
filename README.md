@@ -1,7 +1,13 @@
 ## Notice
 This is a fork of `https://github.com/vincentsaluzzo/node-microphone`.
-I didn't write the code.
-The only thing I did was updating `lame` version to `1.2.4`. I did it because the original author no longer response to pull request.
+
+### How is it different from the original (version 1.8.0)
+
+* `lame` was updated to version `1.2.4`.
+* There are some additional option keys:
+    - `mp3output` : Same as the original mp3output
+    - `cmd` : The command used. By default `microphone` use `sox` for mac and windows, and `alsa` for linux. If you want to use `sox` in linux, just simply use `sox`
+    - `cmdParams`: Array, arguments of command specified in `cmd`
 
 ## Information
 
