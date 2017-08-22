@@ -1,3 +1,8 @@
+## Notice
+This is a fork of `https://github.com/vincentsaluzzo/node-microphone`.
+I didn't write the code.
+The only thing I did was updating `lame` version to `1.2.4`. I did it because the original author no longer response to pull request.
+
 ## Information
 
 <table>
